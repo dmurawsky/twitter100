@@ -3,8 +3,8 @@ require('dotenv').config()
 const getOauthRequest = require('../../../server/routes/getOauthRequest')
 
 describe('GET /oauth_request', function (){
-  const OAuth = require('oauth')
   it('should return a response with the Twitter authorisation URL', function (done) {
+    const OAuth = require('oauth')
     const oauth = new OAuth.OAuth(
       'https://api.twitter.com/oauth/request_token',
       'https://api.twitter.com/oauth/access_token',
